@@ -12,6 +12,7 @@ function App() {
 
   useEffect(()=>{
     if(!notesData) return;
+    console.log(notesData)
     setNotes(notesData);
   },[])
 

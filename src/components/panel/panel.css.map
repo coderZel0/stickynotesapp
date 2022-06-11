@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAEA,AAAA,MAAM,CAAA;EACF,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,IAAI;ECaX,OAAO,EAAC,IAAI;EACZ,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,cAAc,EAJW,GAAG;EDV5B,QAAQ,EAAC,QAAQ;CASpB;;AAPI,AAAD,aAAQ,CAAA;EACJ,KAAK,EAAC,OAAO;EACb,MAAM,EAAC,OAAO;EACd,gBAAgB,EAAE,KAAK;EACvB,OAAO,EAAE,GAAG;EACZ,QAAQ,EAAC,QAAQ;CACpB",
     "sources": [
-        "panel.scss"
+        "panel.scss",
+        "../styles/variables.scss"
     ],
     "names": [],
     "file": "panel.css"

@@ -8,12 +8,33 @@ const Panel = ({notes})=>{
     const [done,setDone] = useState([]);
 
     useEffect(()=>{
+        const todoArr = [];
+        const progressArr =[];
+        const doneArr = [];
+
+        notes.forEach(element => {
+            if(element.pane === "todo"){
+                todoArr.push(element);
+            }
+            else if(element.pane === "inProgress"){
+                progressArr.push(element);
+            }
+            else{
+                doneArr.push(element);
+            }
         
+        setTodo(todoArr);
+        setInProgress(progressArr);
+        setDone(doneArr);
+            
+        });
     },[notes])
 
     return (
         <div className="panel">
-            <div className="layer">
+            <div className="panel__layer">
+            </div>
+            <div className="panel__panes">
                 <Pane/>
                 <Pane/>
                 <Pane/>

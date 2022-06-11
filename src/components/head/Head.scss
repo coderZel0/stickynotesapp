@@ -1,11 +1,6 @@
 @import '../styles/variables.scss';
 
-@mixin flexCenter($direction:row) {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: $direction;
-}
+
 
 
 .head{
@@ -71,9 +66,16 @@
         }
         .archive_container{
             flex:1;
+            
             button{
                 width:80px;
                 height:30px;
+                color:whitesmoke;
+                background-color: rgb(238, 87, 252);
+                border-radius:5px;
+                font-size:14px;
+                font-weight:fontWeight(regular);
+                cursor:pointer;
             }
         }
     }
