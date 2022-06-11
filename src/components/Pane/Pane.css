@@ -21,7 +21,6 @@
           flex: 1;
   border: 2px solid orangered;
   position: relative;
-  overflow: hidden;
 }
 
 .pane__title {
@@ -40,8 +39,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background: -webkit-gradient(linear, left top, right top, from(yellow), color-stop(20%), to(#ee6731));
-  background: linear-gradient(90deg, yellow, 20%, #ee6731);
+  background: radial-gradient(yellow, 20%, #ee6731);
 }
 
 .pane__content {
@@ -50,9 +48,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-y: scroll;
+  /*height:80%;*/
+}
+
+.pane__content .content__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  /*height:80%;*/
-  background-color: plum;
 }
 /*# sourceMappingURL=Pane.css.map */

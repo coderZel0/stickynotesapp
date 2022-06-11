@@ -9,7 +9,7 @@ const Panel = ({notes})=>{
 
     const [todoStyle,setTodoStyle] = useState({title:{gradient1:"#40EFC0",gradient2:"#3648E6"},primary:"blue"});
     const [progressStyle,setProgStyle] = useState({title:{gradient1:"#E1ED38",gradient2:"#F38E1A"},primary:"blue"});
-    const [doneStyle,setDoneStyle] = useState({title:{gradient1:"#37DE74",gradient2:"#3AD034"},primary:"blue"});
+    const [doneStyle,setDoneStyle] = useState({title:{gradient1:"#37EDAA",gradient2:"#3AD034"},primary:"blue"});
 
     useEffect(()=>{
         const todoArr = [];
@@ -41,9 +41,9 @@ const Panel = ({notes})=>{
             <div className="panel__layer">
             </div>
             <div className="panel__panes">
-                <Pane style={todoStyle}/>
-                <Pane style={progressStyle}/>
-                <Pane style={doneStyle}/>
+                <Pane paneTitle={{Title:"TO DO"}} notes={todo} style={todoStyle}/>
+                <Pane paneTitle={{Title:"IN PROGRESS"}} style={progressStyle}/>
+                <Pane paneTitle={{Title:"DONE"}} style={doneStyle}/>
             </div>
         </div>
     )

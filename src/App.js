@@ -19,7 +19,9 @@ function App() {
   return (
     <div className="App">
       <Head hide={hide} setHide={setHide}/>
-      {notesData && <Panel notes ={notes}/>}
+      <div className='panel_container'>
+        {notesData && <Panel notes ={notes}/>}
+      </div>
     </div>
   );
 }

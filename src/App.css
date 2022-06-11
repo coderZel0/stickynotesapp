@@ -3,9 +3,18 @@
   height:100vh;
   padding:0;
   margin:0;
+  width:100%;
   display:flex;
   flex-direction: column;
   align-items: center;
   background:linear-gradient(0deg,lime,30%,cyan);
+  position: fixed;
+}
+
+.panel_container{
+  width:100%;
+  position: absolute;
+  top:75px;
+  height:100%;
 }
 
