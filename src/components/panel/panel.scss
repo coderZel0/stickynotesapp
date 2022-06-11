@@ -13,4 +13,11 @@
         opacity: 0.3;
         position:absolute;
     }
+
+    &__panes{
+        width:inherit;
+        height:inherit;
+        @include flexCenter();
+        justify-content: space-around;
+    }
 }

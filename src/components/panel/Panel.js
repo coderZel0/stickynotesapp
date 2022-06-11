@@ -7,6 +7,8 @@ const Panel = ({notes})=>{
     const [inProgress,setInProgress] = useState([]);
     const [done,setDone] = useState([]);
 
+    const [todoStyle,setTodoStyle] = useState({title:{grdient1:"white",gradient2:"blue"},primary:"blue"});
+
     useEffect(()=>{
         const todoArr = [];
         const progressArr =[];
@@ -35,7 +37,7 @@ const Panel = ({notes})=>{
             <div className="panel__layer">
             </div>
             <div className="panel__panes">
-                <Pane/>
+                <Pane style={todoStyle}/>
                 <Pane/>
                 <Pane/>
             </div>
