@@ -7,7 +7,9 @@ const Panel = ({notes})=>{
     const [inProgress,setInProgress] = useState([]);
     const [done,setDone] = useState([]);
 
-    const [todoStyle,setTodoStyle] = useState({title:{grdient1:"white",gradient2:"blue"},primary:"blue"});
+    const [todoStyle,setTodoStyle] = useState({title:{gradient1:"#40EFC0",gradient2:"#3648E6"},primary:"blue"});
+    const [progressStyle,setProgStyle] = useState({title:{gradient1:"#E1ED38",gradient2:"#F38E1A"},primary:"blue"});
+    const [doneStyle,setDoneStyle] = useState({title:{gradient1:"#37DE74",gradient2:"#3AD034"},primary:"blue"});
 
     useEffect(()=>{
         const todoArr = [];
@@ -28,7 +30,9 @@ const Panel = ({notes})=>{
         setTodo(todoArr);
         setInProgress(progressArr);
         setDone(doneArr);
-            
+        
+        console.log("totdoArr",todoArr);
+        console.log("progressarr",progressArr);
         });
     },[notes])
 
@@ -38,8 +42,8 @@ const Panel = ({notes})=>{
             </div>
             <div className="panel__panes">
                 <Pane style={todoStyle}/>
-                <Pane/>
-                <Pane/>
+                <Pane style={progressStyle}/>
+                <Pane style={doneStyle}/>
             </div>
         </div>
     )
