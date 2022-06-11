@@ -1,0 +1,80 @@
+@import '../styles/variables.scss';
+
+@mixin flexCenter($direction:row) {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+
+.head{
+    @include flexCenter();
+    width:100%;
+    color:$primary;
+    font-weight: $heavy;
+    background: rgb(13, 4, 56);
+    height:100px;
+
+    &_inner_container{
+        @include flexCenter();
+        width: 100%;
+        height:inherit;
+        justify-content: space-around;
+        box-sizing: border-box;
+
+        .logo{
+            flex:1;
+            font-size: 22px;
+            text-shadow: 5px 5px 10px $golden;
+            height:inherit;
+            @include flexCenter();
+        }
+
+        .search_container{
+            flex:2;
+            height:inherit;
+            
+            @include flexCenter();
+
+            .search_inner_container{
+                @include flexCenter();
+                background-color: rgb(225, 226, 228);
+                width:40%;
+                height:40px;
+                border-radius:30px;
+                .search_icon{
+                    @include flexCenter();
+                    width:10%;
+                    color:rgb(7, 7, 7);
+                    font-size:23px;
+                    height:inherit;
+                }
+                .search_input{
+                    width:90%;
+                    height:inherit;
+                    
+                    border-radius: 10px;
+                    @include flexCenter();
+                    
+                    input{
+                        height:35px;
+                        width:100%;
+                        border:none;
+                        outline: none;
+                        border-radius: 30px;
+                        background-color: rgb(225, 226, 228);
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        .archive_container{
+            flex:1;
+            button{
+                width:80px;
+                height:30px;
+            }
+        }
+    }
+}
