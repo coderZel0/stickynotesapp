@@ -7,7 +7,7 @@ const Pane = ({style})=> {
 
     return(
         <div className="pane">
-            <div className="pane__title" style={{background:"linear-gradient(90,gradient1,gradient2)"}}>Title</div>
+            <div className="pane__title" style={{background:`linear-gradient(90,${gradient1},20%,${gradient2})`}}>Title</div>
             <div className="pane__content">
                 COntent
             </div>
