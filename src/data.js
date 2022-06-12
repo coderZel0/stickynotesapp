@@ -14,13 +14,37 @@ export const notesData = [
     {
       title:"some job 3",
       description:"some description",
-      pane:"todo",
+      pane:"done",
       archived:false
     },
     {
       title:"some job 4",
       description:"some description",
       pane:"todo",
+      archived:false
+    },
+    {
+      title:"some job 3",
+      description:"some description",
+      pane:"done",
+      archived:false
+    },
+    {
+      title:"some job 4",
+      description:"some description",
+      pane:"inProgress",
+      archived:false
+    },
+    {
+      title:"some job 3",
+      description:"some description",
+      pane:"done",
+      archived:false
+    },
+    {
+      title:"some job 4",
+      description:"some description",
+      pane:"inProgress",
       archived:false
     }
   ]
