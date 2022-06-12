@@ -1,0 +1,65 @@
+@import '../styles/variables.scss';
+
+
+.addNoteContainer{
+    @include flexCenter(column);
+    justify-content: space-around;
+    background:linear-gradient(0deg,rgb(41, 200, 240),rgb(32, 221, 42));
+    width:470px;
+    height:300px;
+    border-radius: 10px;
+
+    .note_details{
+        @include flexCenter(column);
+        justify-content: space-around;
+       
+        height:50%;
+        width:100%;
+        .feild{
+            @include flexCenter();
+            justify-content: flex-start;
+            height:40px;
+            width:80%;
+            
+            label{
+                width:25%;
+            }
+            .input{
+                
+                width:75%;
+                height:100%;
+                
+                input{
+                    width:100%;
+                    height: 100%;
+                    outline:none;
+                    border:none;
+                    font-size: 16px;
+                    border-radius: 10px;
+                }
+                textarea{
+                    width:100%;
+                    height: 170%;
+                    outline:none;
+                    border:none;
+                    font-size: 16px;
+                    border-radius: 10px;
+                
+                }
+            }
+
+        }
+    }
+
+    button{
+        border:none;
+        outline:none;
+        transform: scale(1.5);
+        height:30px;
+        background-color: rgb(132, 44, 248);
+        cursor:pointer;
+        border-radius: 5px;
+        color:whitesmoke;
+        font-weight: 700;
+    }
+}

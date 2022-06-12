@@ -27,7 +27,6 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: black;
 }
 
 .pane__title {
@@ -76,5 +75,34 @@
   width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.addNote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.7s ease-in;
+  transition: 0.7s ease-in;
+}
+
+.addNote:hover {
+  background: radial-gradient(white, 5%, black 90%);
+}
+
+.addNote:hover i {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 /*# sourceMappingURL=Pane.css.map */

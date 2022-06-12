@@ -10,7 +10,9 @@
   background:linear-gradient(0deg,lime,30%,cyan);
   position: fixed;
 }
-
+.head{
+  position:absolute;
+}
 .panel_container{
   width:100%;
   position: absolute;

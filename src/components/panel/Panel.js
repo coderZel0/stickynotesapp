@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './panel.css';
 import Pane from '../Pane/Pane'
 
-const Panel = ({notes})=>{
+const Panel = ({notes,setShowModal,setType})=>{
     const [todo,setTodo] = useState([]);
     const [inProgress,setInProgress] = useState([]);
     const [done,setDone] = useState([]);
@@ -41,7 +41,7 @@ const Panel = ({notes})=>{
             <div className="panel__layer">
             </div>
             <div className="panel__panes">
-                <Pane paneTitle={{Title:"TO DO"}} notes={todo} style={todoStyle}/>
+                <Pane paneTitle={{Title:"TO DO"}} notes={todo} style={todoStyle} addNote={true} setShowModal={setShowModal} setType={setType}/>
                 <Pane paneTitle={{Title:"IN PROGRESS"}} notes={inProgress} style={progressStyle}/>
                 <Pane paneTitle={{Title:"DONE"}} notes={done} style={doneStyle}/>
             </div>

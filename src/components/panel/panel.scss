@@ -15,6 +15,7 @@
     }
 
     &__panes{
+        position:absolute;
         width:inherit;
         height:inherit;
         @include flexCenter();
