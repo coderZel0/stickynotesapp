@@ -15,7 +15,7 @@ const Addnote = ({setNotes}) => {
             <div className='feild title'>
                 <label for='title'>Title:</label>
                 <div className='input'>
-                    <input onChange={(e)=>{setNote(state=>{...state,title:e.target.value})}} type="text" name='title'></input>
+                    <input onChange={(e)=>{setNote(state=>{return{...state,title:e.target.value}})}} type="text" name='title'></input>
                 </div>
             </div>
             <div className='feild description'>
