@@ -12,6 +12,7 @@
         width:100%;
         height:100%;
         position:absolute;
+        background-color: black;
     }
 
     &__title{
@@ -26,6 +27,10 @@
         width:100%;
         display:flex;
         overflow-y:scroll;
+        ::-webkit-scrollbar{
+            width:0 !important;
+        }
+        
         /*height:80%;*/
         .content__inner{
             display: flex;
