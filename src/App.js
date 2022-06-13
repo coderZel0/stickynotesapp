@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      {(showModal)?(modalType === "addNote")? (<Modal setShowModal={setShowModal}><Addnote/></Modal>):(<Modal setShowModal={setShowModal}/>):null}
+      {(showModal)?(modalType === "addNote")? (<Modal setShowModal={setShowModal}><Addnote setNotes={setNotes} setShowModal={setShowModal}/></Modal>):(<Modal setShowModal={setShowModal}/>):null}
       <Head hide={hide} setHide={setHide}/>
       <div className='panel_container'>
         {notesData && <Panel setShowModal={setShowModal} notes ={notes} setType={setType}/>}

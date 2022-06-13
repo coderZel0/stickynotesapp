@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import './addnote.css'
 
-const Addnote = ({setNotes}) => {
-    const [note,setNote] = useState({title:'',desctiption:'',archived:false,pane:"todo"});
+const Addnote = ({setNotes,setShowModal}) => {
+    const [note,setNote] = useState({title:'',description:'',archived:false,pane:"todo"});
 
     const addNote =()=>{
-
+        setNotes(state=>[note,...state]);
+        setNote({title:'',description:'',archived:false,pane:"todo"});
+        setShowModal(false);
     }
 
 
@@ -13,15 +15,15 @@ const Addnote = ({setNotes}) => {
     <div className='addNoteContainer'>
         <div className='note_details'>
             <div className='feild title'>
-                <label for='title'>Title:</label>
+                <label htmlFor='title'>Title:</label>
                 <div className='input'>
                     <input onChange={(e)=>{setNote(state=>{return{...state,title:e.target.value}})}} type="text" name='title'></input>
                 </div>
             </div>
             <div className='feild description'>
-                <label for="desc">Description:</label>
+                <label htmlFor="desc">Description:</label>
                 <div className='input'>
-                    <textarea name='desc'></textarea>
+                    <textarea onChange={(e)=>{setNote(state=>{return{...state,description:e.target.value}})}} name='desc'></textarea>
                 </div>
                 
             </div>

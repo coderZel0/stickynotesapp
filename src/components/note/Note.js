@@ -1,7 +1,7 @@
 import React, { useState,useEffect, useRef } from 'react'
 import './note.css';
 
-const Note = ({note,style,children}) => {
+const Note = ({note,style,children,onClick}) => {
 const [title,setTitle] = useState('');
 const [content,setContent] = useState('');
 

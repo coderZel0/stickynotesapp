@@ -47,7 +47,9 @@ const Pane = ({paneTitle:{Title},notes,style,addNote,setShowModal,setType})=> {
                             <i style={{fontSize:"28px",color:"white"}} className='fas fa-plus'></i>
                         </div>
                         </Note>}
-                    {notes && <Note setType={setType} style={style.noteStyle} note={notes[0]}/>}
+                    {notes && notes.map((note,index)=>{
+                        return <Note onClick={()=>{setShowModal(true);setType('showNote')}} key={index} setType={setType} style={style.noteStyle} note={note}/>;
+                    })}
                     
                 </div>
                 
