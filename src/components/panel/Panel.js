@@ -42,8 +42,8 @@ const Panel = ({notes,setShowModal,setType})=>{
             </div>
             <div className="panel__panes">
                 <Pane paneTitle={{Title:"TO DO"}} notes={todo} style={todoStyle} addNote={true} setShowModal={setShowModal} setType={setType}/>
-                <Pane paneTitle={{Title:"IN PROGRESS"}} notes={inProgress} style={progressStyle}/>
-                <Pane paneTitle={{Title:"DONE"}} notes={done} style={doneStyle}/>
+                <Pane paneTitle={{Title:"IN PROGRESS"}} notes={inProgress} style={progressStyle} setShowModal={setShowModal} setType={setType}/>
+                <Pane paneTitle={{Title:"DONE"}} notes={done} style={doneStyle} setShowModal={setShowModal} setType={setType}/>
             </div>
         </div>
     )

@@ -13,6 +13,13 @@
     font-size:12px;
     cursor:pointer;
 
+    .noteMenu{
+        position:absolute;
+        right:-2px;
+        top:2px;
+        z-index:2;
+    }
+
     &__layer{
         width:100%;
         height: 100%;
@@ -25,6 +32,24 @@
         width:100%;
         height:100%;
         @include flexCenter(column);
+        justify-content: space-around;
         position: absolute;
+        
+        .option__icon{
+            @include flexCenter();
+            position:absolute;
+            width:15px;
+            height: 15px;
+            top:2px;
+            right:2px;
+           z-index:1;
+        }
+        .note__title{
+            font-size: 14px;
+        }
+        .note__description{
+            
+            padding:4px;
+        }
     }
 }
